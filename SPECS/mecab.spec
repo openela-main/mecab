@@ -9,9 +9,9 @@
 Name:		mecab
 Version:	%{mainver}
 %if %{?betaver:0}%{!?betaver:1}
-Release:	%{fedorarel}%{?dist}.3
+Release:	%{fedorarel}%{?dist}.4
 %else
-Release:	0.%{fedorarel}.%{betaver}%{?dist}.3
+Release:	0.%{fedorarel}.%{betaver}%{?dist}.4
 %endif
 Summary:	Yet Another Part-of-Speech and Morphological Analyzer
 
@@ -106,6 +106,11 @@ cd ..
 %{_includedir}/%{name}.h
 
 %changelog
+* Mon Mar 27 2023 Michal Schorm <mschorm@redhat.com> - 0.996-3.4
+- Bump version for package rebuild
+  We are moving the 'mecab-devel' RPM from the 'buildroot' repo to the 'CRB' repo
+- Resolves: #2182069
+
 * Mon Aug 09 2021 Mohan Boddu <mboddu@redhat.com> - 0.996-3.3
 - Rebuilt for IMA sigs, glibc 2.34, aarch64 flags
   Related: rhbz#1991688
